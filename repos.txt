@@ -1,0 +1,7 @@
+robocodeBER01
+robocodeBER02
+robocodeBUK01
+robocodeBUK02
+robocodeBRV01
+robocodeDUS01
+
