@@ -4,14 +4,14 @@
 listOfRobots="/home/jk/robo/listOfRobots"
 jenkinsApiToken="84756b7dd39d5fbd8f18ef6f25813145"
 jenkinsConfigTemplate="/home/jk/robo/jenkinsConfigTemplate.xml"
-# BER = Berlin, DUS = Düsseldorf, ??? = Bucharest, ??? = Brasov, ALL = all Cities
-location="DUS"
+# ber = Berlin, dus = Düsseldorf, buk = Bucharest, brv = Brasov, ALL = all Cities
+location="ber"
 
 #Adding Jenkins Jobs from listOfRobots
 CRUMB=$(curl -s 'http://localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)' --user admin:$jenkinsApiToken)
 while read -r robot
 do
-    name="robocode"
+    name="robocode18"
     if [[ $robot == "robocode$location"* || $location == ALL ]] ;
     then
         cp $jenkinsConfigTemplate "jenkinsConfig.xml"
